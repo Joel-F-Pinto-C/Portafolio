@@ -3,196 +3,123 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portafolio</title>
+    <title>Joel Pinto | Portafolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="config.js"></script>
-    <meta
-      name="description"
-      content="Portafolio personal: proyectos, habilidades y contacto."
-    />
+    <meta name="description" content="Portafolio personal: proyectos, habilidades y contacto." />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+      body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    </style>
   </head>
 
-  <body class="bg-white text-slate-800 dark:bg-slate-950 dark:text-slate-100">
-    <!-- Encabezado -->
-    <header
-      class="sticky top-0 z-50 border-b border-slate-200/70 bg-white/80 backdrop-blur dark:border-slate-800/80 dark:bg-slate-950/70"
-    >
-      <nav
-        class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3"
-      >
-        <a
-          href="#inicio"
-          class="flex items-center gap-2 font-bold tracking-tight"
-        >
-          <span
-            class="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-slate-900 text-white dark:bg-slate-100 dark:text-slate-950"
-            >JP</span
-          >
-          <span>JOEL FREDDY PINTO CUTILI</span>
+  <body class="bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-300">
+    <header class="sticky top-0 z-50 border-b border-slate-200/50 bg-white/80 backdrop-blur-md dark:border-slate-800/50 dark:bg-slate-950/80">
+      <nav class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+        <a href="#inicio" class="flex items-center gap-3 font-extrabold tracking-tight group">
+          <span class="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-slate-950 text-white dark:bg-slate-50 dark:text-slate-950 group-hover:scale-110 transition-transform">
+            JP
+          </span>
+          <span class="text-xs uppercase tracking-widest hidden sm:block">Joel Freddy Pinto Cutili</span>
         </a>
 
-        <div class="hidden items-center gap-6 md:flex">
-          <a class="text-sm hover:opacity-80" href="#sobre-mi">Sobre mí</a>
-          <a class="text-sm hover:opacity-80" href="#habilidades"
-            >Habilidades</a
-          >
-          <a class="text-sm hover:opacity-80" href="#proyectos">Proyectos</a>
-          <a class="text-sm hover:opacity-80" href="#contacto">Contacto</a>
-          <button
-            id="themeBtn"
-            class="rounded-xl border border-slate-200 px-3 py-2 text-sm hover:bg-slate-50 dark:border-slate-800 dark:hover:bg-slate-900"
-            type="button"
-          >
-            🌙/☀️
+        <div class="hidden items-center gap-8 md:flex">
+          <a class="text-sm font-semibold hover:text-blue-600 dark:hover:text-blue-400 transition-colors" href="#sobre-mi">Sobre mí</a>
+          <a class="text-sm font-semibold hover:text-blue-600 dark:hover:text-blue-400 transition-colors" href="#habilidades">Habilidades</a>
+          <a class="text-sm font-semibold hover:text-blue-600 dark:hover:text-blue-400 transition-colors" href="#proyectos">Proyectos</a>
+          <a class="text-sm font-semibold hover:text-blue-600 dark:hover:text-blue-400 transition-colors" href="#contacto">Contacto</a>
+          <button id="themeBtn" class="rounded-xl border border-slate-200 p-2.5 hover:bg-white dark:border-slate-800 dark:hover:bg-slate-900 transition-all shadow-sm" type="button">
+            🌓
           </button>
         </div>
 
-        <div class="flex items-center gap-2 md:hidden">
-          <button
-            id="themeBtnMobile"
-            class="rounded-xl border border-slate-200 px-3 py-2 text-sm hover:bg-slate-50 dark:border-slate-800 dark:hover:bg-slate-900"
-            type="button"
-          >
-            🌙/☀️
-          </button>
-          <button
-            id="menuBtn"
-            class="rounded-xl border border-slate-200 px-3 py-2 text-sm hover:bg-slate-50 dark:border-slate-800 dark:hover:bg-slate-900"
-            type="button"
-          >
-            ☰
-          </button>
+        <div class="flex items-center gap-3 md:hidden">
+          <button id="themeBtnMobile" class="rounded-xl border border-slate-200 p-2 dark:border-slate-800">🌓</button>
+          <button id="menuBtn" class="rounded-xl border border-slate-200 p-2 dark:border-slate-800">☰</button>
         </div>
       </nav>
 
-      <!-- Mobile menu -->
-      <div
-        id="mobileMenu"
-        class="hidden border-t border-slate-200 px-4 py-3 dark:border-slate-800 md:hidden"
-      >
-        <div class="flex flex-col gap-3">
-          <a class="text-sm hover:opacity-80" href="#sobre-mi">Sobre mí</a>
-          <a class="text-sm hover:opacity-80" href="#habilidades"
-            >Habilidades</a
-          >
-          <a class="text-sm hover:opacity-80" href="#proyectos">Proyectos</a>
-          <a class="text-sm hover:opacity-80" href="#contacto">Contacto</a>
-          <a
-            class="rounded-xl bg-slate-900 px-4 py-2 text-center text-sm font-semibold text-white hover:opacity-90 dark:bg-slate-100 dark:text-slate-950"
-            href="#contacto"
-          >
-            Hablemos
-          </a>
+      <div id="mobileMenu" class="hidden border-t border-slate-200 bg-white/95 px-6 py-6 dark:border-slate-800 dark:bg-slate-950/95 md:hidden">
+        <div class="flex flex-col gap-5 text-center">
+          <a class="text-lg font-medium" href="#sobre-mi">Sobre mí</a>
+          <a class="text-lg font-medium" href="#habilidades">Habilidades</a>
+          <a class="text-lg font-medium" href="#proyectos">Proyectos</a>
+          <a class="text-lg font-medium" href="#contacto">Contacto</a>
+          <a class="rounded-2xl bg-slate-950 px-4 py-3 text-center text-sm font-bold text-white dark:bg-slate-50 dark:text-slate-950" href="#contacto">Hablemos</a>
         </div>
       </div>
     </header>
 
-    <!-- Hero -->
-    <section id="inicio" class="mx-auto max-w-6xl px-4 py-16">
-      <div class="grid items-center gap-10 md:grid-cols-2">
-        <div>
-          <p
-            class="inline-flex items-center gap-2 rounded-full border border-slate-200 px-3 py-1 text-xs font-semibold dark:border-slate-800"
-          >
-            🧑‍💻 En formación • Web Dev
+    <section id="inicio" class="mx-auto max-w-6xl px-6 py-16 lg:py-28">
+      <div class="grid items-center gap-12 md:grid-cols-2">
+        <div class="space-y-6">
+          <p class="inline-flex items-center gap-2 rounded-full border border-blue-200 bg-blue-50/50 px-4 py-1.5 text-xs font-bold text-blue-700 dark:border-blue-900/30 dark:bg-blue-900/20 dark:text-blue-400">
+            <span class="flex h-2 w-2 rounded-full bg-blue-500"></span>
+            En formación • Web Dev
           </p>
-          <h1 class="mt-4 text-4xl font-extrabold tracking-tight md:text-5xl">
-            Hola, mi nombre es
-            <span
-              class="underline decoration-slate-300 dark:decoration-slate-500"
-              >Joel Freddy Pinto Cutili
+          <h1 class="text-4xl font-extrabold tracking-tight md:text-6xl leading-tight">
+            Hola, mi nombre es <br>
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-500 dark:from-blue-400 dark:to-cyan-400">
+              Joel Freddy Pinto Cutili
+            </span>
           </h1>
-          <p
-            class="mt-4 text-base leading-relaxed text-slate-600 dark:text-slate-300"
-          >
-            Estudiante enfocado en desarrollo web. Trabajo con
-            <strong>HTML</strong>, <strong>TailwindCSS</strong>,
-            <strong>JavaScript</strong>, <strong>Vuejs</strong>,
-            <strong>PHP/Laravel</strong> y bases de datos
-            <strong>MySQL</strong>, <strong>PostgreSQL</strong>
+          <p class="text-base md:text-lg leading-relaxed text-slate-600 dark:text-slate-400 max-w-md">
+            Estudiante enfocado en desarrollo web. Trabajo con 
+            <span class="font-bold text-slate-900 dark:text-white">HTML, TailwindCSS, JavaScript, Vuejs, PHP/Laravel</span> 
+            y bases de datos <span class="font-bold text-slate-900 dark:text-white">MySQL, PostgreSQL</span>.
           </p>
 
-          <div class="mt-6 flex flex-wrap gap-3">
-            <a
-              href="#proyectos"
-              class="rounded-xl bg-slate-900 px-5 py-3 text-sm font-semibold text-white hover:opacity-90 dark:bg-slate-100 dark:text-slate-950"
-            >
+          <div class="flex flex-wrap gap-4 pt-4">
+            <a href="#proyectos" class="rounded-2xl bg-slate-950 px-8 py-4 text-sm font-bold text-white hover:bg-slate-800 transition-all dark:bg-slate-50 dark:text-slate-950 shadow-xl shadow-slate-200 dark:shadow-none">
               Ver proyectos
             </a>
-            <a
-              href="#contacto"
-              class="rounded-xl border border-slate-200 px-5 py-3 text-sm font-semibold hover:bg-slate-50 dark:border-slate-800 dark:hover:bg-slate-900"
-            >
+            <a href="#contacto" class="rounded-2xl border border-slate-200 bg-white px-8 py-4 text-sm font-bold hover:bg-slate-50 transition-all dark:border-slate-800 dark:bg-transparent dark:hover:bg-slate-900">
               Contacto
             </a>
-            <a
-              href="CV.pdf"
-              class="rounded-xl border border-slate-200 px-5 py-3 text-sm font-semibold hover:bg-slate-50 dark:border-slate-800 dark:hover:bg-slate-900"
-              target="_blank"
-            >
+            <a href="CV.pdf" target="_blank" class="rounded-2xl border border-slate-200 bg-white px-8 py-4 text-sm font-bold hover:bg-slate-50 transition-all dark:border-slate-800 dark:bg-transparent dark:hover:bg-slate-900">
               Visualizar CV
             </a>
           </div>
         </div>
 
-        <!-- Card -->
-        <div
-          class="rounded-2xl border border-slate-200 bg-slate-50 p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900"
-        >
-          <div class="flex items-start justify-between gap-4">
-            <div>
-              <p class="text-sm font-semibold">Actualmente</p>
-              <p class="mt-1 text-sm text-slate-600 dark:text-slate-300">
-                Estudiante de la Carrera Ingenieria de Sistemas 9no Semestre con
-                mencion Informatica y Telecomunicaciones
-              </p>
-            </div>
-            <span
-              class="rounded-xl bg-white px-3 py-1 text-xs font-semibold text-slate-700 shadow-sm dark:bg-slate-950 dark:text-slate-200"
-            >
-              Disponible
-            </span>
-          </div>
-
-          <div class="mt-6 grid gap-3">
-            <div class="rounded-xl bg-white p-4 dark:bg-slate-950">
-              <p class="text-sm font-semibold">Objetivo</p>
-              <p class="mt-1 text-sm text-slate-600 dark:text-slate-300">
-                Lograr colaborar con diferentes empresas
-              </p>
+        <div class="relative group">
+          <div class="absolute -inset-1 rounded-[2.5rem] bg-gradient-to-r from-blue-600 to-cyan-500 opacity-20 blur-xl group-hover:opacity-30 transition duration-1000"></div>
+          <div class="relative rounded-[2rem] border border-slate-200 bg-white p-8 shadow-2xl dark:border-slate-800 dark:bg-slate-900 transition-transform duration-500">
+            <div class="flex items-start justify-between">
+              <div>
+                <p class="text-[10px] font-bold uppercase tracking-widest text-slate-400">Estado actual</p>
+                <p class="mt-1 text-sm font-bold">Disponible para colaborar</p>
+              </div>
+              <span class="rounded-full bg-emerald-50 px-3 py-1 text-[10px] font-bold text-emerald-600 dark:bg-emerald-500/10 dark:text-emerald-400 uppercase">
+                En línea
+              </span>
             </div>
 
-            <div class="rounded-xl bg-white p-4 dark:bg-slate-950">
-              <p class="text-sm font-semibold">Ubicación</p>
-              <p class="mt-1 text-sm text-slate-600 dark:text-slate-300">
-                Actualmente Bolivia-La Paz
-              </p>
-            </div>
+            <div class="mt-8 space-y-6">
+              <div class="rounded-2xl bg-slate-50 p-5 dark:bg-slate-950 border border-slate-100 dark:border-slate-800">
+                <p class="text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-2">Actualmente</p>
+                <p class="text-sm font-medium leading-relaxed">
+                    Tecnico Medio en Sistemas Informaticos <br> 
+                    Estudiante de Ingeniería de Sistemas (9no Semestre) con mención en Informática y Telecomunicaciones.</p>
+              </div>
+              
+              <div class="grid grid-cols-2 gap-4">
+                <div class="rounded-2xl bg-slate-50 p-5 dark:bg-slate-950 border border-slate-100 dark:border-slate-800">
+                  <p class="text-[10px] font-bold uppercase tracking-widest text-slate-400">Objetivo</p>
+                  <p class="mt-2 text-xs font-bold leading-tight">Colaborar con diferentes empresas.</p>
+                </div>
+                <div class="rounded-2xl bg-slate-50 p-5 dark:bg-slate-950 border border-slate-100 dark:border-slate-800">
+                  <p class="text-[10px] font-bold uppercase tracking-widest text-slate-400">Ubicación</p>
+                  <p class="mt-2 text-xs font-bold leading-tight">La Paz, Bolivia</p>
+                </div>
+              </div>
 
-            <div class="rounded-xl bg-white p-4 dark:bg-slate-950">
-              <p class="text-sm font-semibold">Links</p>
-              <div class="mt-2 flex flex-wrap gap-2 text-sm">
-                <a
-                  class="underline hover:opacity-80"
-                  href="https://github.com/Joel-F-Pinto-C"
-                  target="_blank"
-                  rel="noreferrer"
-                  >GitHub</a
-                >
-                <a
-                  class="underline hover:opacity-80"
-                  href="https://www.linkedin.com/in/joel-pinto-84219723a/"
-                  target="_blank"
-                  rel="noreferrer"
-                  >LinkedIn</a
-                >
-                <a
-                  class="underline hover:opacity-80"
-                  href="#"
-                  target="_blank"
-                  rel="noreferrer"
-                  >Correo</a
-                >
+              <div>
+                <p class="text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-3">Links de contacto</p>
+                <div class="flex flex-wrap gap-3">
+                  <a class="text-xs font-bold px-4 py-2 rounded-lg bg-slate-900 text-white dark:bg-slate-800 hover:scale-105 transition-transform" href="https://github.com/Joel-F-Pinto-C" target="_blank">GitHub</a>
+                  <a class="text-xs font-bold px-4 py-2 rounded-lg bg-slate-900 text-white dark:bg-slate-800 hover:scale-105 transition-transform" href="https://www.linkedin.com/in/joel-pinto-84219723a/" target="_blank">LinkedIn</a>
+                </div>
               </div>
             </div>
           </div>
@@ -200,52 +127,36 @@
       </div>
     </section>
 
-    <!-- About -->
-    <section
-      id="sobre-mi"
-      class="border-t border-slate-200 py-16 dark:border-slate-800"
-    >
-      <div class="mx-auto max-w-6xl px-4">
-        <h2 class="text-2xl font-bold tracking-tight">Sobre mí</h2>
-        <p class="mt-3 max-w-3xl text-slate-600 dark:text-slate-300">
-          Soy estudiante de la carrera Ingenieria de Sistemas, soy autodidacta
-          enfocado en el desarrollo web fullstack Me gusta crear interfaces
-          limpias, trabajar con buenas prácticas y mejorar cada proyecto con
-          detalle
+    <section id="sobre-mi" class="border-t border-slate-200/50 py-24 dark:border-slate-800/50">
+      <div class="mx-auto max-w-6xl px-6">
+        <h2 class="text-3xl font-bold tracking-tight">Sobre mí</h2>
+        <p class="mt-6 max-w-3xl text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
+          Soy estudiante de la carrera Ingeniería de Sistemas, soy autodidacta enfocado en el desarrollo web fullstack. Me gusta crear interfaces limpias, trabajar con buenas prácticas y mejorar cada proyecto con detalle.
         </p>
 
-        <div class="mt-8 grid gap-4 md:grid-cols-3">
-          <div
-            class="rounded-2xl border border-slate-200 p-5 dark:border-slate-500"
-          >
-            <p class="text-sm font-semibold">Fortalezas</p>
-            <ul
-              class="mt-3 space-y-2 text-sm text-slate-600 dark:text-slate-300"
-            >
+        <div class="mt-12 grid gap-6 md:grid-cols-3">
+          <div class="group rounded-3xl border border-slate-200 p-8 hover:bg-white hover:shadow-xl transition-all dark:border-slate-800 dark:hover:bg-slate-900/50">
+            <div class="mb-4 text-2xl">⚡</div>
+            <p class="text-sm font-bold uppercase tracking-widest text-blue-600 dark:text-blue-400">Fortalezas</p>
+            <ul class="mt-6 space-y-3 text-sm font-medium opacity-80 group-hover:opacity-100">
               <li>• Aprendizaje rápido</li>
               <li>• Orden y consistencia</li>
               <li>• Trabajo en equipo</li>
             </ul>
           </div>
-          <div
-            class="rounded-2xl border border-slate-200 p-5 dark:border-slate-500"
-          >
-            <p class="text-sm font-semibold">En progreso</p>
-            <ul
-              class="mt-3 space-y-2 text-sm text-slate-600 dark:text-slate-300"
-            >
+          <div class="group rounded-3xl border border-slate-200 p-8 hover:bg-white hover:shadow-xl transition-all dark:border-slate-800 dark:hover:bg-slate-900/50">
+            <div class="mb-4 text-2xl">⏳</div>
+            <p class="text-sm font-bold uppercase tracking-widest text-indigo-600 dark:text-indigo-400">En progreso</p>
+            <ul class="mt-6 space-y-3 text-sm font-medium opacity-80 group-hover:opacity-100">
               <li>• Desarrollo de Software</li>
               <li>• Docker</li>
               <li>• N8N</li>
             </ul>
           </div>
-          <div
-            class="rounded-2xl border border-slate-200 p-5 dark:border-slate-500"
-          >
-            <p class="text-sm font-semibold">Intereses</p>
-            <ul
-              class="mt-3 space-y-2 text-sm text-slate-600 dark:text-slate-300"
-            >
+          <div class="group rounded-3xl border border-slate-200 p-8 hover:bg-white hover:shadow-xl transition-all dark:border-slate-800 dark:hover:bg-slate-900/50">
+            <div class="mb-4 text-2xl">💡</div>
+            <p class="text-sm font-bold uppercase tracking-widest text-cyan-600 dark:text-cyan-400">Intereses</p>
+            <ul class="mt-6 space-y-3 text-sm font-medium opacity-80 group-hover:opacity-100">
               <li>• UI/UX simple</li>
               <li>• Proyectos reales</li>
               <li>• Buenas prácticas</li>
@@ -255,372 +166,144 @@
       </div>
     </section>
 
-    <!-- Skills -->
-    <section
-      id="habilidades"
-      class="border-t border-slate-200 py-16 dark:border-slate-800"
-    >
-      <div class="mx-auto max-w-6xl px-4">
-        <h2 class="text-2xl font-bold tracking-tight">Habilidades</h2>
-        <p class="mt-3 text-slate-600 dark:text-slate-300">
-          Lo que uso y lo que estoy fortaleciendo.
-        </p>
+    <section id="habilidades" class="border-t border-slate-200/50 py-24 dark:border-slate-800/50 bg-white/50 dark:bg-slate-900/20">
+      <div class="mx-auto max-w-6xl px-6">
+        <h2 class="text-3xl font-bold tracking-tight text-center">Habilidades</h2>
+        <p class="mt-4 text-slate-600 dark:text-slate-400 text-center">Lo que uso y lo que estoy fortaleciendo.</p>
 
-        <div class="mt-8 grid gap-4 md:grid-cols-2">
-          <div
-            class="rounded-2xl border border-slate-200 p-6 dark:border-slate-800"
-          >
-            <h3 class="text-sm font-semibold">Desarrollo web</h3>
-            <div class="mt-4 flex flex-wrap gap-2">
-              <span
-                class="rounded-full border border-slate-200 px-3 py-1 text-xs dark:border-slate-800"
-                >HTML5</span
-              >
-              <span
-                class="rounded-full border border-slate-200 px-3 py-1 text-xs dark:border-slate-800"
-                >CSS3</span
-              >
-              <span
-                class="rounded-full border border-slate-200 px-3 py-1 text-xs dark:border-slate-800"
-                >TailwindCSS</span
-              >
-              <span
-                class="rounded-full border border-slate-200 px-3 py-1 text-xs dark:border-slate-800"
-                >JavaScript</span
-              >
+        <div class="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <div class="p-8 rounded-[2rem] border border-slate-200 bg-white dark:border-slate-800 dark:bg-slate-900/50">
+            <h3 class="text-xs font-black uppercase tracking-widest text-slate-400 mb-6">Desarrollo web</h3>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-[14px] font-bold">HTML5</span>
+              <span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-[14px] font-bold">CSS3</span>
+              <span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-[14px] font-bold">TailwindCSS</span>
+              <span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-[14px] font-bold">JavaScript</span>
             </div>
           </div>
 
-          <div
-            class="rounded-2xl border border-slate-200 p-6 dark:border-slate-800"
-          >
-            <h3 class="text-sm font-semibold">Backend & BD</h3>
-            <div class="mt-4 flex flex-wrap gap-2">
-              <span
-                class="rounded-full border border-slate-200 px-3 py-1 text-xs dark:border-slate-800"
-                >PHP</span
-              >
-              <span
-                class="rounded-full border border-slate-200 px-3 py-1 text-xs dark:border-slate-800"
-                >Laravel 12</span
-              >
-              <span
-                class="rounded-full border border-slate-200 px-3 py-1 text-xs dark:border-slate-800"
-                >MySQL</span
-              >
-              <span
-                class="rounded-full border border-slate-200 px-3 py-1 text-xs dark:border-slate-800"
-                >PostgreSQL</span
-              >
+          <div class="p-8 rounded-[2rem] border border-slate-200 bg-white dark:border-slate-800 dark:bg-slate-900/50">
+            <h3 class="text-xs font-black uppercase tracking-widest text-slate-400 mb-6">Backend & BD</h3>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 rounded-full bg-blue-50 text-blue-600 dark:bg-blue-900/20 text-[14px] font-bold">PHP</span>
+              <span class="px-3 py-1 rounded-full bg-blue-50 text-blue-600 dark:bg-blue-900/20 text-[14px] font-bold">Laravel 12</span>
+              <span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-[14px] font-bold">MySQL</span>
+              <span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-[14px] font-bold">PostgreSQL</span>
             </div>
           </div>
 
-          <div
-            class="rounded-2xl border border-slate-200 p-6 dark:border-slate-800"
-          >
-            <h3 class="text-sm font-semibold">Herramientas</h3>
-            <div class="mt-4 flex flex-wrap gap-2">
-              <span
-                class="rounded-full border border-slate-200 px-3 py-1 text-xs dark:border-slate-800"
-                >Git</span
-              >
-              <span
-                class="rounded-full border border-slate-200 px-3 py-1 text-xs dark:border-slate-800"
-                >GitHub</span
-              >
-              <span
-                class="rounded-full border border-slate-200 px-3 py-1 text-xs dark:border-slate-800"
-                >VS Code</span
-              >
-              <span
-                class="rounded-full border border-slate-200 px-3 py-1 text-xs dark:border-slate-800"
-                >DBeaver</span
-              >
-              <span
-                class="rounded-full border border-slate-200 px-3 py-1 text-xs dark:border-slate-800"
-                >Linux / WSL</span
-              >
+          <div class="p-8 rounded-[2rem] border border-slate-200 bg-white dark:border-slate-800 dark:bg-slate-900/50">
+            <h3 class="text-xs font-black uppercase tracking-widest text-slate-400 mb-6">Herramientas</h3>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-[14px] font-bold">Git</span>
+              <span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-[14px] font-bold">GitHub</span>
+              <span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-[14px] font-bold">VS Code</span>
+              <span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-[14px] font-bold">Linux / WSL</span>
             </div>
           </div>
 
-          <div
-            class="rounded-2xl border border-slate-200 p-6 dark:border-slate-800"
-          >
-            <h3 class="text-sm font-semibold">Habilidades blandas</h3>
-            <div class="mt-4 flex flex-wrap gap-2">
-              <span
-                class="rounded-full border border-slate-200 px-3 py-1 text-xs dark:border-slate-800"
-                >Responsabilidad</span
-              >
-              <span
-                class="rounded-full border border-slate-200 px-3 py-1 text-xs dark:border-slate-800"
-                >Organización</span
-              >
-              <span
-                class="rounded-full border border-slate-200 px-3 py-1 text-xs dark:border-slate-800"
-                >Trabajo en equipo</span
-              >
-              <span
-                class="rounded-full border border-slate-200 px-3 py-1 text-xs dark:border-slate-800"
-                >Aprendizaje rápido</span
-              >
+          <div class="p-8 rounded-[2rem] border border-slate-200 bg-white dark:border-slate-800 dark:bg-slate-900/50">
+            <h3 class="text-xs font-black uppercase tracking-widest text-slate-400 mb-6">Soft Skills</h3>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 rounded-full bg-emerald-50 text-emerald-600 dark:bg-emerald-900/20 text-[14px] font-bold uppercase">Responsabilidad</span>
+              <span class="px-3 py-1 rounded-full bg-emerald-50 text-emerald-600 dark:bg-emerald-900/20 text-[14px] font-bold uppercase">Trabajo equipo</span>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Projects -->
-    <section
-      id="proyectos"
-      class="border-t border-slate-200 py-16 dark:border-slate-800"
-    >
-      <div class="mx-auto max-w-6xl px-4">
-        <div
-          class="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between"
-        >
+    <section id="proyectos" class="py-24 border-t border-slate-200/50 dark:border-slate-800/50">
+      <div class="mx-auto max-w-6xl px-6">
+        <h2 class="text-3xl font-bold tracking-tight mb-12">Proyectos Seleccionados</h2>
+        
+        <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          <article class="flex flex-col rounded-[2rem] border border-slate-200 bg-white p-8 hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 dark:border-slate-800 dark:bg-slate-900/50 overflow-hidden">
+            <h3 class="text-lg font-bold">Sistema de Gestion Academica</h3>
+            <p class="mt-4 text-sm text-slate-600 dark:text-slate-400 leading-relaxed flex-grow">
+              Sistema propuesto para un colegio para el control digital de notas trimestrales y generación de reportes automáticos.
+            </p>
+            <div class="mt-8 flex flex-wrap gap-2">
+              <span class="px-2 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-[14px] font-bold uppercase">Laravel 12</span>
+              <span class="px-2 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-[14px] font-bold uppercase">Vue.js</span>
+              <span class="px-2 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-[14px] font-bold uppercase">Inertia</span>
+            </div>
+            <div class="mt-8 flex gap-4 text-xs font-bold border-t border-slate-100 dark:border-slate-800 pt-6">
+              <a class="hover:text-blue-600 underline transition-colors" href="#">Demo</a>
+              <a class="hover:text-blue-600 underline transition-colors" href="#">Código</a>
+            </div>
+          </article>
+
+          <article class="flex flex-col rounded-[2rem] border border-slate-200 bg-white p-8 hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 dark:border-slate-800 dark:bg-slate-900/50">
+            <h3 class="text-lg font-bold">Portafolio Personal</h3>
+            <p class="mt-4 text-sm text-slate-600 dark:text-slate-400 leading-relaxed flex-grow">
+              Espacio digital para destacar proyectos realizados durante mi carrera profesional y personal.
+            </p>
+            <div class="mt-8 flex flex-wrap gap-2">
+              <span class="px-2 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-[14px] font-bold uppercase">Tailwind</span>
+              <span class="px-2 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-[14px] font-bold uppercase">Responsive</span>
+            </div>
+            <div class="mt-8 flex gap-4 text-xs font-bold border-t border-slate-100 dark:border-slate-800 pt-6">
+              <a class="hover:text-blue-600 underline transition-colors" href="#">Demo</a>
+              <a class="hover:text-blue-600 underline transition-colors" href="#">Código</a>
+            </div>
+          </article>
+
+          <article class="flex flex-col rounded-[2rem] border border-slate-200 bg-white p-8 hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 dark:border-slate-800 dark:bg-slate-900/50">
+            <h3 class="text-lg font-bold">Gestión e Inventario Farmacéutico</h3>
+            <p class="mt-4 text-sm text-slate-600 dark:text-slate-400 leading-relaxed flex-grow">
+              Landing page y panel administrador/vendedor para control de inventario, facturación y reportes de seguridad.
+            </p>
+            <div class="mt-8 flex flex-wrap gap-2">
+              <span class="px-2 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-[10px] font-bold uppercase">PHP</span>
+              <span class="px-2 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-[10px] font-bold uppercase">MySQL</span>
+            </div>
+            <div class="mt-8 flex gap-4 text-xs font-bold border-t border-slate-100 dark:border-slate-800 pt-6">
+              <a class="hover:text-blue-600 underline transition-colors" href="#">Ver Pagina</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto" class="py-24 border-t border-slate-200/50 dark:border-slate-800/50 bg-slate-950 text-white">
+      <div class="mx-auto max-w-6xl px-6">
+        <div class="grid gap-16 md:grid-cols-2 items-center">
           <div>
-            <h2 class="text-2xl font-bold tracking-tight">Proyectos</h2>
-          </div>
-        </div>
-
-        <div class="mt-8 grid gap-4 md:grid-cols-3">
-          <!-- Card 1 -->
-          <article
-            data-type="frontend"
-            class="projectCard rounded-2xl border border-slate-200 p-5 hover:shadow-sm dark:border-slate-800"
-          >
-            <h3 class="text-base font-semibold">
-              Sistema de Gestion Academica (Republica del Japon)
-            </h3>
-            <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">
-              Sistema propuesto para un colegio para el control de manera digital 
-              para saber notas de los estudiantes en cualquier momento de manera trimestral 
-              generacion de notas y varios reportes para facilitar los tramites a futuro
-            </p>
-            <div class="mt-4 flex flex-wrap gap-2 text-xs">
-              <span
-                class="rounded-full border border-slate-200 px-2 py-1 dark:border-slate-800"
-                >Tailwindcss</span
-              >
-              <span
-                class="rounded-full border border-slate-200 px-2 py-1 dark:border-slate-800"
-                >HTML</span
-              >
-              <span
-                class="rounded-full border border-slate-200 px-2 py-1 dark:border-slate-800"
-                >CSS</span
-              >
-              <span
-                class="rounded-full border border-slate-200 px-2 py-1 dark:border-slate-800"
-                >Laravel 12
-              </span>
-              <span
-                class="rounded-full border border-slate-200 px-2 py-1 dark:border-slate-800"
-                >Vue.js
-              </span>
-              <span
-                class="rounded-full border border-slate-200 px-2 py-1 dark:border-slate-800"
-                >Inertia
-              </span>
-              <span
-                class="rounded-full border border-slate-200 px-2 py-1 dark:border-slate-800"
-                >MySQL
-              </span>
-            </div>
-            <div class="mt-5 flex gap-3 text-sm">
-              <a
-                class="underline hover:opacity-80"
-                href="#"
-                target="_blank"
-                rel="noreferrer"
-                >Demo</a
-              >
-              <a
-                class="underline hover:opacity-80"
-                href="#"
-                target="_blank"
-                rel="noreferrer"
-                >Código</a
-              >
-            </div>
-          </article>
-
-          <!-- Card 2 -->
-          <article
-            data-type="frontend"
-            class="projectCard rounded-2xl border border-slate-200 p-5 hover:shadow-sm dark:border-slate-800"
-          >
-            <h3 class="text-base font-semibold">Portafolio Personal</h3>
-            <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">
-                Portafolio personal para destacar todos mis proyectos realizados
-                en el transcurso de mi carrera ya sea de la carrera o de forma personal.
-            </p>
-            <div class="mt-4 flex flex-wrap gap-2 text-xs">
-              <span
-                class="rounded-full border border-slate-200 px-2 py-1 dark:border-slate-800"
-                >HTML</span
-              >
-              <span
-                class="rounded-full border border-slate-200 px-2 py-1 dark:border-slate-800"
-                >JavaScript</span
-              >
-              <span
-                class="rounded-full border border-slate-200 px-2 py-1 dark:border-slate-800"
-                >Tailwind</span
-              >
-              <span
-                class="rounded-full border border-slate-200 px-2 py-1 dark:border-slate-800"
-                >Responsive</span
-              >
-            </div>
-            <div class="mt-5 flex gap-3 text-sm">
-              <a
-                class="underline hover:opacity-80"
-                href="#"
-                target="_blank"
-                rel="noreferrer"
-                >Demo</a
-              >
-              <a
-                class="underline hover:opacity-80"
-                href="#"
-                target="_blank"
-                rel="noreferrer"
-                >Código</a
-              >
-            </div>
-          </article>
-
-          <!-- Card 3 -->
-          <article
-            data-type="fullstack"
-            class="projectCard rounded-2xl border border-slate-200 p-5 hover:shadow-sm dark:border-slate-800"
-          >
-            <h3 class="text-base font-semibold">
-              Sistema de Gestion y Inventario de una Farmeceutica
-            </h3>
-            <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">
-              El sistema consta de una landing page, seccion administrador y
-              vendedor El cual puede generar reportes, facturas y tambien
-              seguridad de movimientos realizados por el personal.
-            </p>
-            <div class="mt-4 flex flex-wrap gap-2 text-xs">
-              <span
-                class="rounded-full border border-slate-200 px-2 py-1 dark:border-slate-800"
-                >HTML</span
-              >
-              <span
-                class="rounded-full border border-slate-200 px-2 py-1 dark:border-slate-800"
-                >Tailwindcss</span
-              >
-              <span
-                class="rounded-full border border-slate-200 px-2 py-1 dark:border-slate-800"
-                >PHP</span
-              >
-              <span
-                class="rounded-full border border-slate-200 px-2 py-1 dark:border-slate-800"
-                >JavaScript</span
-              >
-              <span
-                class="rounded-full border border-slate-200 px-2 py-1 dark:border-slate-800"
-                >MySQL</span
-              >
-            </div>
-            <div class="mt-5 flex gap-3 text-sm">
-              <a
-                class="underline hover:opacity-80"
-                href="#"
-                target="_blank"
-                rel="noreferrer"
-                >Ver Pagina</a
-              >
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact -->
-    <section
-      id="contacto"
-      class="border-t border-slate-200 py-16 dark:border-slate-800"
-    >
-      <div class="mx-auto max-w-6xl px-4">
-        <h2 class="text-2xl font-bold tracking-tight">Contacto</h2>
-        <div class="mt-8 grid gap-6 md:grid-cols-2">
-          <div
-            class="rounded-2xl border border-slate-200 p-6 dark:border-slate-800"
-          >
-            <p class="text-sm font-semibold">Email</p>
-            <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">
-              pinto.12574531@gmail.com
-            </p>
-
-            <p class="mt-5 text-sm font-semibold">Redes</p>
-            <div class="mt-2 flex flex-wrap gap-3 text-sm">
-              <a
-                class="underline hover:opacity-80"
-                href="#"
-                target="_blank"
-                rel="noreferrer"
-                >GitHub</a
-              >
-              <a
-                class="underline hover:opacity-80"
-                href="#"
-                target="_blank"
-                rel="noreferrer"
-                >LinkedIn</a
-              >
+            <h2 class="text-4xl font-extrabold tracking-tight">Construyamos algo juntos</h2>
+            <p class="mt-6 text-slate-400 text-lg leading-relaxed">¿Tienes una idea o un proyecto en mente? Estoy disponible para charlar y ver cómo puedo ayudarte.</p>
+            
+            <div class="mt-12 space-y-8">
+              <div>
+                <p class="text-[10px] font-bold uppercase tracking-[0.2em] text-blue-400 mb-2">Email</p>
+                <p class="text-xl font-medium">pinto.12574531@gmail.com</p>
+              </div>
+              <div class="flex gap-8 font-bold text-xs uppercase tracking-widest text-slate-500">
+                <a class="hover:text-white transition-colors" href="#">GitHub</a>
+                <a class="hover:text-white transition-colors" href="#">LinkedIn</a>
+              </div>
             </div>
           </div>
 
-          <div
-            class="rounded-2xl border border-slate-200 p-6 dark:border-slate-800"
-          >
-            <p class="text-sm font-semibold">Mensaje rápido</p>
-            <form class="mt-4 space-y-3" action="">
-              <input
-                class="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-slate-300 dark:border-slate-800 dark:bg-slate-950 dark:focus:ring-slate-700"
-                type="text"
-                placeholder="Tu nombre"
-                required
-              />
-              <input
-                class="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-slate-300 dark:border-slate-800 dark:bg-slate-950 dark:focus:ring-slate-700"
-                type="email"
-                placeholder="Tu correo"
-                required
-              />
-              <textarea
-                class="h-28 w-full resize-none rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-slate-300 dark:border-slate-800 dark:bg-slate-950 dark:focus:ring-slate-700"
-                placeholder="Tu mensaje..."
-                required
-              ></textarea>
-              <button
-                class="w-full rounded-xl bg-slate-900 px-5 py-3 text-sm font-semibold text-white hover:opacity-90 dark:bg-slate-100 dark:text-slate-950"
-                type="submit"
-              >
-                Enviar
-              </button>
+          <div class="rounded-[2.5rem] bg-white/5 border border-white/10 p-10 backdrop-blur-xl">
+            <h3 class="text-xl font-bold mb-8">Mensaje rápido</h3>
+            <form class="space-y-4">
+              <input class="w-full rounded-2xl bg-white/10 border-transparent px-6 py-4 text-sm outline-none focus:ring-2 focus:ring-blue-500 transition-all" type="text" placeholder="Tu nombre" required />
+              <input class="w-full rounded-2xl bg-white/10 border-transparent px-6 py-4 text-sm outline-none focus:ring-2 focus:ring-blue-500 transition-all" type="email" placeholder="Tu correo" required />
+              <textarea class="h-32 w-full rounded-2xl bg-white/10 border-transparent px-6 py-4 text-sm outline-none focus:ring-2 focus:ring-blue-500 transition-all resize-none" placeholder="Tu mensaje..." required></textarea>
+              <button class="w-full rounded-2xl bg-blue-600 py-4 text-sm font-bold hover:bg-blue-500 transition-colors shadow-lg shadow-blue-600/20" type="submit">Enviar mensaje</button>
             </form>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="border-t border-slate-200 py-10 dark:border-slate-800">
-      <div
-        class="mx-auto flex max-w-6xl flex-col gap-3 px-4 sm:flex-row sm:items-center sm:justify-between"
-      >
-        <p class="text-sm text-slate-500 dark:text-slate-400">
-          © <span id="year"></span> JFPC. Hecho con HTML, TailwindCSS y JavaScript.
+    <footer class="py-12 border-t border-slate-200/50 dark:border-slate-800/50 text-center">
+      <div class="mx-auto max-w-6xl px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+        <p class="text-sm text-slate-500">
+          © <span id="year"></span> JFPC. Hecho con HTML, Tailwind y JS.
         </p>
-        <a class="text-sm underline hover:opacity-80" href="#inicio"
-          >Volver arriba</a
-        >
+        <a class="text-xs font-bold uppercase tracking-[0.2em] hover:text-blue-500 transition-colors" href="#inicio">Volver arriba</a>
       </div>
     </footer>
 

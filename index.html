@@ -1,11 +1,667 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+<!doctype html>
+<html lang="es" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portafolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="config.js"></script>
+
+    <meta
+      name="description"
+      content="Portafolio personal: proyectos, habilidades y contacto."
+    />
+  </head>
+
+  <body class="bg-white text-slate-800 dark:bg-slate-950 dark:text-slate-100">
+    <!-- Header -->
+    <header
+      class="sticky top-0 z-50 border-b border-slate-200/70 bg-white/80 backdrop-blur dark:border-slate-800/80 dark:bg-slate-950/70"
+    >
+      <nav
+        class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3"
+      >
+        <a
+          href="#inicio"
+          class="flex items-center gap-2 font-bold tracking-tight"
+        >
+          <span
+            class="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-slate-900 text-white dark:bg-slate-100 dark:text-slate-950"
+            >JP</span
+          >
+          <span>Tu Nombre</span>
+        </a>
+
+        <div class="hidden items-center gap-6 md:flex">
+          <a class="text-sm hover:opacity-80" href="#sobre-mi">Sobre mí</a>
+          <a class="text-sm hover:opacity-80" href="#habilidades"
+            >Habilidades</a
+          >
+          <a class="text-sm hover:opacity-80" href="#proyectos">Proyectos</a>
+          <a class="text-sm hover:opacity-80" href="#contacto">Contacto</a>
+          <button
+            id="themeBtn"
+            class="rounded-xl border border-slate-200 px-3 py-2 text-sm hover:bg-slate-50 dark:border-slate-800 dark:hover:bg-slate-900"
+            type="button"
+          >
+            🌙/☀️
+          </button>
+          <a
+            class="rounded-xl bg-slate-900 px-4 py-2 text-sm font-semibold text-white hover:opacity-90 dark:bg-slate-100 dark:text-slate-950"
+            href="#contacto"
+          >
+            Hablemos
+          </a>
+        </div>
+
+        <div class="flex items-center gap-2 md:hidden">
+          <button
+            id="themeBtnMobile"
+            class="rounded-xl border border-slate-200 px-3 py-2 text-sm hover:bg-slate-50 dark:border-slate-800 dark:hover:bg-slate-900"
+            type="button"
+          >
+            🌙/☀️
+          </button>
+          <button
+            id="menuBtn"
+            class="rounded-xl border border-slate-200 px-3 py-2 text-sm hover:bg-slate-50 dark:border-slate-800 dark:hover:bg-slate-900"
+            type="button"
+          >
+            ☰
+          </button>
+        </div>
+      </nav>
+
+      <!-- Mobile menu -->
+      <div
+        id="mobileMenu"
+        class="hidden border-t border-slate-200 px-4 py-3 dark:border-slate-800 md:hidden"
+      >
+        <div class="flex flex-col gap-3">
+          <a class="text-sm hover:opacity-80" href="#sobre-mi">Sobre mí</a>
+          <a class="text-sm hover:opacity-80" href="#habilidades"
+            >Habilidades</a
+          >
+          <a class="text-sm hover:opacity-80" href="#proyectos">Proyectos</a>
+          <a class="text-sm hover:opacity-80" href="#contacto">Contacto</a>
+          <a
+            class="rounded-xl bg-slate-900 px-4 py-2 text-center text-sm font-semibold text-white hover:opacity-90 dark:bg-slate-100 dark:text-slate-950"
+            href="#contacto"
+          >
+            Hablemos
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <section id="inicio" class="mx-auto max-w-6xl px-4 py-16">
+      <div class="grid items-center gap-10 md:grid-cols-2">
+        <div>
+          <p
+            class="inline-flex items-center gap-2 rounded-full border border-slate-200 px-3 py-1 text-xs font-semibold dark:border-slate-800"
+          >
+            🧑‍💻 En formación • Web Dev
+          </p>
+          <h1 class="mt-4 text-4xl font-extrabold tracking-tight md:text-5xl">
+            Hola, soy
+            <span
+              class="underline decoration-slate-300 dark:decoration-slate-700"
+              >Tu Nombre</span
+            >. Construyo interfaces limpias y sistemas web.
+          </h1>
+          <p
+            class="mt-4 text-base leading-relaxed text-slate-600 dark:text-slate-300"
+          >
+            Estudiante enfocado en desarrollo web. Trabajo con
+            <strong>HTML</strong>, <strong>TailwindCSS</strong>,
+            <strong>JavaScript</strong> y estoy aprendiendo
+            <strong>PHP/Laravel</strong> y bases de datos.
+          </p>
+
+          <div class="mt-6 flex flex-wrap gap-3">
+            <a
+              href="#proyectos"
+              class="rounded-xl bg-slate-900 px-5 py-3 text-sm font-semibold text-white hover:opacity-90 dark:bg-slate-100 dark:text-slate-950"
+            >
+              Ver proyectos
+            </a>
+            <a
+              href="#contacto"
+              class="rounded-xl border border-slate-200 px-5 py-3 text-sm font-semibold hover:bg-slate-50 dark:border-slate-800 dark:hover:bg-slate-900"
+            >
+              Contacto
+            </a>
+            <a
+              href="#"
+              class="rounded-xl border border-slate-200 px-5 py-3 text-sm font-semibold hover:bg-slate-50 dark:border-slate-800 dark:hover:bg-slate-900"
+            >
+              Descargar CV
+            </a>
+          </div>
+
+          <div
+            class="mt-6 flex flex-wrap gap-2 text-xs text-slate-500 dark:text-slate-400"
+          >
+            <span
+              class="rounded-full border border-slate-200 px-3 py-1 dark:border-slate-800"
+              >Tailwind</span
+            >
+            <span
+              class="rounded-full border border-slate-200 px-3 py-1 dark:border-slate-800"
+              >JavaScript</span
+            >
+            <span
+              class="rounded-full border border-slate-200 px-3 py-1 dark:border-slate-800"
+              >PHP</span
+            >
+            <span
+              class="rounded-full border border-slate-200 px-3 py-1 dark:border-slate-800"
+              >MySQL</span
+            >
+            <span
+              class="rounded-full border border-slate-200 px-3 py-1 dark:border-slate-800"
+              >Git/GitHub</span
+            >
+          </div>
+        </div>
+
+        <!-- Card -->
+        <div
+          class="rounded-2xl border border-slate-200 bg-slate-50 p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900"
+        >
+          <div class="flex items-start justify-between gap-4">
+            <div>
+              <p class="text-sm font-semibold">Actualmente</p>
+              <p class="mt-1 text-sm text-slate-600 dark:text-slate-300">
+                Aprendiendo Tailwind, JS y construyendo proyectos para
+                pasantías.
+              </p>
+            </div>
+            <span
+              class="rounded-xl bg-white px-3 py-1 text-xs font-semibold text-slate-700 shadow-sm dark:bg-slate-950 dark:text-slate-200"
+            >
+              Disponible
+            </span>
+          </div>
+
+          <div class="mt-6 grid gap-3">
+            <div class="rounded-xl bg-white p-4 dark:bg-slate-950">
+              <p class="text-sm font-semibold">Objetivo</p>
+              <p class="mt-1 text-sm text-slate-600 dark:text-slate-300">
+                Conseguir pasantía para aplicar lo aprendido y crecer en un
+                equipo real.
+              </p>
+            </div>
+
+            <div class="rounded-xl bg-white p-4 dark:bg-slate-950">
+              <p class="text-sm font-semibold">Ubicación</p>
+              <p class="mt-1 text-sm text-slate-600 dark:text-slate-300">
+                Bolivia • Remoto / Presencial
+              </p>
+            </div>
+
+            <div class="rounded-xl bg-white p-4 dark:bg-slate-950">
+              <p class="text-sm font-semibold">Links</p>
+              <div class="mt-2 flex flex-wrap gap-2 text-sm">
+                <a
+                  class="underline hover:opacity-80"
+                  href="#"
+                  target="_blank"
+                  rel="noreferrer"
+                  >GitHub</a
+                >
+                <a
+                  class="underline hover:opacity-80"
+                  href="#"
+                  target="_blank"
+                  rel="noreferrer"
+                  >LinkedIn</a
+                >
+                <a
+                  class="underline hover:opacity-80"
+                  href="#"
+                  target="_blank"
+                  rel="noreferrer"
+                  >Correo</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section
+      id="sobre-mi"
+      class="border-t border-slate-200 py-16 dark:border-slate-800"
+    >
+      <div class="mx-auto max-w-6xl px-4">
+        <h2 class="text-2xl font-bold tracking-tight">Sobre mí</h2>
+        <p class="mt-3 max-w-3xl text-slate-600 dark:text-slate-300">
+          Soy estudiante y estoy construyendo una base sólida en desarrollo web.
+          Me gusta crear interfaces limpias, trabajar con buenas prácticas y
+          mejorar cada proyecto con detalle (responsive, accesibilidad,
+          performance).
+        </p>
+
+        <div class="mt-8 grid gap-4 md:grid-cols-3">
+          <div
+            class="rounded-2xl border border-slate-200 p-5 dark:border-slate-800"
+          >
+            <p class="text-sm font-semibold">Fortalezas</p>
+            <ul
+              class="mt-3 space-y-2 text-sm text-slate-600 dark:text-slate-300"
+            >
+              <li>• Aprendizaje rápido</li>
+              <li>• Orden y consistencia</li>
+              <li>• Trabajo en equipo</li>
+            </ul>
+          </div>
+          <div
+            class="rounded-2xl border border-slate-200 p-5 dark:border-slate-800"
+          >
+            <p class="text-sm font-semibold">En progreso</p>
+            <ul
+              class="mt-3 space-y-2 text-sm text-slate-600 dark:text-slate-300"
+            >
+              <li>• Laravel (CRUD, validaciones)</li>
+              <li>• MySQL (consultas y relaciones)</li>
+              <li>• Git flow básico</li>
+            </ul>
+          </div>
+          <div
+            class="rounded-2xl border border-slate-200 p-5 dark:border-slate-800"
+          >
+            <p class="text-sm font-semibold">Intereses</p>
+            <ul
+              class="mt-3 space-y-2 text-sm text-slate-600 dark:text-slate-300"
+            >
+              <li>• UI/UX simple</li>
+              <li>• Proyectos reales</li>
+              <li>• Buenas prácticas</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section
+      id="habilidades"
+      class="border-t border-slate-200 py-16 dark:border-slate-800"
+    >
+      <div class="mx-auto max-w-6xl px-4">
+        <h2 class="text-2xl font-bold tracking-tight">Habilidades</h2>
+        <p class="mt-3 text-slate-600 dark:text-slate-300">
+          Lo que uso y lo que estoy fortaleciendo.
+        </p>
+
+        <div class="mt-8 grid gap-4 md:grid-cols-2">
+          <div
+            class="rounded-2xl border border-slate-200 p-6 dark:border-slate-800"
+          >
+            <h3 class="text-sm font-semibold">Desarrollo web</h3>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span
+                class="rounded-full border border-slate-200 px-3 py-1 text-xs dark:border-slate-800"
+                >HTML5</span
+              >
+              <span
+                class="rounded-full border border-slate-200 px-3 py-1 text-xs dark:border-slate-800"
+                >CSS3</span
+              >
+              <span
+                class="rounded-full border border-slate-200 px-3 py-1 text-xs dark:border-slate-800"
+                >TailwindCSS</span
+              >
+              <span
+                class="rounded-full border border-slate-200 px-3 py-1 text-xs dark:border-slate-800"
+                >JavaScript</span
+              >
+            </div>
+          </div>
+
+          <div
+            class="rounded-2xl border border-slate-200 p-6 dark:border-slate-800"
+          >
+            <h3 class="text-sm font-semibold">Backend & BD</h3>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span
+                class="rounded-full border border-slate-200 px-3 py-1 text-xs dark:border-slate-800"
+                >PHP</span
+              >
+              <span
+                class="rounded-full border border-slate-200 px-3 py-1 text-xs dark:border-slate-800"
+                >Laravel (aprendiendo)</span
+              >
+              <span
+                class="rounded-full border border-slate-200 px-3 py-1 text-xs dark:border-slate-800"
+                >MySQL</span
+              >
+              <span
+                class="rounded-full border border-slate-200 px-3 py-1 text-xs dark:border-slate-800"
+                >PostgreSQL</span
+              >
+            </div>
+          </div>
+
+          <div
+            class="rounded-2xl border border-slate-200 p-6 dark:border-slate-800"
+          >
+            <h3 class="text-sm font-semibold">Herramientas</h3>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span
+                class="rounded-full border border-slate-200 px-3 py-1 text-xs dark:border-slate-800"
+                >Git</span
+              >
+              <span
+                class="rounded-full border border-slate-200 px-3 py-1 text-xs dark:border-slate-800"
+                >GitHub</span
+              >
+              <span
+                class="rounded-full border border-slate-200 px-3 py-1 text-xs dark:border-slate-800"
+                >VS Code</span
+              >
+              <span
+                class="rounded-full border border-slate-200 px-3 py-1 text-xs dark:border-slate-800"
+                >DBeaver</span
+              >
+              <span
+                class="rounded-full border border-slate-200 px-3 py-1 text-xs dark:border-slate-800"
+                >Linux / WSL</span
+              >
+            </div>
+          </div>
+
+          <div
+            class="rounded-2xl border border-slate-200 p-6 dark:border-slate-800"
+          >
+            <h3 class="text-sm font-semibold">Habilidades blandas</h3>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span
+                class="rounded-full border border-slate-200 px-3 py-1 text-xs dark:border-slate-800"
+                >Responsabilidad</span
+              >
+              <span
+                class="rounded-full border border-slate-200 px-3 py-1 text-xs dark:border-slate-800"
+                >Organización</span
+              >
+              <span
+                class="rounded-full border border-slate-200 px-3 py-1 text-xs dark:border-slate-800"
+                >Trabajo en equipo</span
+              >
+              <span
+                class="rounded-full border border-slate-200 px-3 py-1 text-xs dark:border-slate-800"
+                >Aprendizaje rápido</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section
+      id="proyectos"
+      class="border-t border-slate-200 py-16 dark:border-slate-800"
+    >
+      <div class="mx-auto max-w-6xl px-4">
+        <div
+          class="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between"
+        >
+          <div>
+            <h2 class="text-2xl font-bold tracking-tight">Proyectos</h2>
+            <p class="mt-2 text-slate-600 dark:text-slate-300">
+              Puedes empezar con “Prácticas académicas” si aún no tienes
+              proyectos formales.
+            </p>
+          </div>
+
+          <!-- Filtro simple -->
+          <div class="mt-4 flex gap-2 sm:mt-0">
+            <button
+              data-filter="all"
+              class="filterBtn rounded-xl border border-slate-200 px-3 py-2 text-sm hover:bg-slate-50 dark:border-slate-800 dark:hover:bg-slate-900"
+            >
+              Todos
+            </button>
+            <button
+              data-filter="frontend"
+              class="filterBtn rounded-xl border border-slate-200 px-3 py-2 text-sm hover:bg-slate-50 dark:border-slate-800 dark:hover:bg-slate-900"
+            >
+              Frontend
+            </button>
+            <button
+              data-filter="fullstack"
+              class="filterBtn rounded-xl border border-slate-200 px-3 py-2 text-sm hover:bg-slate-50 dark:border-slate-800 dark:hover:bg-slate-900"
+            >
+              Fullstack
+            </button>
+          </div>
+        </div>
+
+        <div class="mt-8 grid gap-4 md:grid-cols-3">
+          <!-- Card 1 -->
+          <article
+            data-type="frontend"
+            class="projectCard rounded-2xl border border-slate-200 p-5 hover:shadow-sm dark:border-slate-800"
+          >
+            <h3 class="text-base font-semibold">Landing Page Responsive</h3>
+            <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">
+              Diseño moderno con Tailwind, responsive y animaciones suaves.
+            </p>
+            <div class="mt-4 flex flex-wrap gap-2 text-xs">
+              <span
+                class="rounded-full border border-slate-200 px-2 py-1 dark:border-slate-800"
+                >Tailwind</span
+              >
+              <span
+                class="rounded-full border border-slate-200 px-2 py-1 dark:border-slate-800"
+                >HTML</span
+              >
+              <span
+                class="rounded-full border border-slate-200 px-2 py-1 dark:border-slate-800"
+                >JS</span
+              >
+            </div>
+            <div class="mt-5 flex gap-3 text-sm">
+              <a
+                class="underline hover:opacity-80"
+                href="#"
+                target="_blank"
+                rel="noreferrer"
+                >Demo</a
+              >
+              <a
+                class="underline hover:opacity-80"
+                href="#"
+                target="_blank"
+                rel="noreferrer"
+                >Código</a
+              >
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article
+            data-type="frontend"
+            class="projectCard rounded-2xl border border-slate-200 p-5 hover:shadow-sm dark:border-slate-800"
+          >
+            <h3 class="text-base font-semibold">Portafolio Personal</h3>
+            <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">
+              Secciones claras, modo oscuro, navegación y performance.
+            </p>
+            <div class="mt-4 flex flex-wrap gap-2 text-xs">
+              <span
+                class="rounded-full border border-slate-200 px-2 py-1 dark:border-slate-800"
+                >Tailwind</span
+              >
+              <span
+                class="rounded-full border border-slate-200 px-2 py-1 dark:border-slate-800"
+                >Responsive</span
+              >
+            </div>
+            <div class="mt-5 flex gap-3 text-sm">
+              <a
+                class="underline hover:opacity-80"
+                href="#"
+                target="_blank"
+                rel="noreferrer"
+                >Demo</a
+              >
+              <a
+                class="underline hover:opacity-80"
+                href="#"
+                target="_blank"
+                rel="noreferrer"
+                >Código</a
+              >
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article
+            data-type="fullstack"
+            class="projectCard rounded-2xl border border-slate-200 p-5 hover:shadow-sm dark:border-slate-800"
+          >
+            <h3 class="text-base font-semibold">
+              Gestor de Tareas (en progreso)
+            </h3>
+            <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">
+              CRUD básico, validaciones y estados (pendiente/completado).
+            </p>
+            <div class="mt-4 flex flex-wrap gap-2 text-xs">
+              <span
+                class="rounded-full border border-slate-200 px-2 py-1 dark:border-slate-800"
+                >Laravel</span
+              >
+              <span
+                class="rounded-full border border-slate-200 px-2 py-1 dark:border-slate-800"
+                >MySQL</span
+              >
+            </div>
+            <div class="mt-5 flex gap-3 text-sm">
+              <a
+                class="underline hover:opacity-80"
+                href="#"
+                target="_blank"
+                rel="noreferrer"
+                >Detalles</a
+              >
+              <a
+                class="underline hover:opacity-80"
+                href="#"
+                target="_blank"
+                rel="noreferrer"
+                >Código</a
+              >
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section
+      id="contacto"
+      class="border-t border-slate-200 py-16 dark:border-slate-800"
+    >
+      <div class="mx-auto max-w-6xl px-4">
+        <h2 class="text-2xl font-bold tracking-tight">Contacto</h2>
+        <p class="mt-3 max-w-2xl text-slate-600 dark:text-slate-300">
+          ¿Quieres contactarme para una pasantía o colaboración? Escríbeme y
+          respondo lo antes posible.
+        </p>
+
+        <div class="mt-8 grid gap-6 md:grid-cols-2">
+          <div
+            class="rounded-2xl border border-slate-200 p-6 dark:border-slate-800"
+          >
+            <p class="text-sm font-semibold">Email</p>
+            <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">
+              tucorreo@email.com
+            </p>
+
+            <p class="mt-5 text-sm font-semibold">Redes</p>
+            <div class="mt-2 flex flex-wrap gap-3 text-sm">
+              <a
+                class="underline hover:opacity-80"
+                href="#"
+                target="_blank"
+                rel="noreferrer"
+                >GitHub</a
+              >
+              <a
+                class="underline hover:opacity-80"
+                href="#"
+                target="_blank"
+                rel="noreferrer"
+                >LinkedIn</a
+              >
+            </div>
+
+            <p class="mt-5 text-xs text-slate-500 dark:text-slate-400">
+              Tip: si quieres un formulario sin backend, usa Formspree / EmailJS
+              / Netlify Forms.
+            </p>
+          </div>
+
+          <div
+            class="rounded-2xl border border-slate-200 p-6 dark:border-slate-800"
+          >
+            <p class="text-sm font-semibold">Mensaje rápido</p>
+            <form
+              class="mt-4 space-y-3"
+              onsubmit="
+                event.preventDefault();
+                alert('Aquí puedes conectar Formspree/EmailJS');
+              "
+            >
+              <input
+                class="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-slate-300 dark:border-slate-800 dark:bg-slate-950 dark:focus:ring-slate-700"
+                type="text"
+                placeholder="Tu nombre"
+                required
+              />
+              <input
+                class="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-slate-300 dark:border-slate-800 dark:bg-slate-950 dark:focus:ring-slate-700"
+                type="email"
+                placeholder="Tu correo"
+                required
+              />
+              <textarea
+                class="h-28 w-full resize-none rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-slate-300 dark:border-slate-800 dark:bg-slate-950 dark:focus:ring-slate-700"
+                placeholder="Tu mensaje..."
+                required
+              ></textarea>
+              <button
+                class="w-full rounded-xl bg-slate-900 px-5 py-3 text-sm font-semibold text-white hover:opacity-90 dark:bg-slate-100 dark:text-slate-950"
+                type="submit"
+              >
+                Enviar
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-200 py-10 dark:border-slate-800">
+      <div
+        class="mx-auto flex max-w-6xl flex-col gap-3 px-4 sm:flex-row sm:items-center sm:justify-between"
+      >
+        <p class="text-sm text-slate-500 dark:text-slate-400">
+          © <span id="year"></span> Tu Nombre. Hecho con TailwindCSS.
+        </p>
+        <a class="text-sm underline hover:opacity-80" href="#inicio"
+          >Volver arriba</a
+        >
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
 </html>

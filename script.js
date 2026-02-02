@@ -41,19 +41,3 @@ document.getElementById("themeBtn")?.addEventListener("click", toggleTheme);
 document
   .getElementById("themeBtnMobile")
   ?.addEventListener("click", toggleTheme);
-
-// Filtro simple de proyectos
-const filterBtns = document.querySelectorAll(".filterBtn");
-const projectCards = document.querySelectorAll(".projectCard");
-
-filterBtns.forEach((btn) => {
-  btn.addEventListener("click", () => {
-    const filter = btn.dataset.filter;
-
-    projectCards.forEach((card) => {
-      const type = card.getAttribute("data-type");
-      const show = filter === "all" || filter === type;
-      card.classList.toggle("hidden", !show);
-    });
-  });
-});
